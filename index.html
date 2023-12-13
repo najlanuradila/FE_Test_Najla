@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mustika dan Wira Wedding</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section id="hero"
+        class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
+        <div>
+            <img src="img/Flower3.png" class="flowerthree">
+        </div>
+        <div data-aos="fade-right">
+            <main>
+                <h1>
+                    <span class="c1">T</span>
+                    <span class="c2">h</span>
+                    <span class="c3">e</span>
+                    <span class="c4">W</span>
+                    <span class="c5">e</span>
+                    <span class="c6">d</span>
+                    <span class="c7">d</span>
+                    <span class="c8">i</span>
+                    <span class="c9">n</span>
+                    <span class="c10">g</span>
+                    <span class="c11">o</span>
+                    <span class="c12">f</span>
+                </h1>
+                <img src="img/PhotoProfil.png" class="img-u-berdua">
+                <div>
+                    <img src="img/Leaf1.png" class="leafone">
+                </div>
+                <h1 class="">Mustika <br>& Wira</h1>
+                <div class="container">
+                    <div class="date-box">
+                        <p class="date-text">25 | 05 | 2022</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/Leaf2.png" class="leaftwo">
+                </div>
+                <p class="mohon">di mohon kehadirannya</p>
+            </main>
+        </div>
+    </section>
+    <section id="home" class="home">
+        <div>
+            <img src="img/Flower1.png" class="flowerone">
+        </div>
+        <div data-aos="fade-right">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center ">
+                        <div class="col-10 text-center">
+                            <h2>Assalamualaikum Wr. Wb.</h2>
+                            <p>Tanpa mengurangi rasa hormat, Kami mengundang <br> Bapak/Ibu/Saudara/i pada acara
+                                pernikahan kami:
+                            <p>
+                            <div>
+                                <img src="img/Leaf2.png" class="leafthree">
+                            </div>
+                            <h1>Mustika</h1>
+                            <p>Putra dari Bpk Winarno & Ibu Julaikah</p>
+                            <h1>&<br>Wira</h1>
+                            <div>
+                                <img src="img/Leaf1.png" class="leaffour">
+                            </div>
+                            <p class="putra">Putra dari Bpk Winarno & Ibu Julaikah</p>
+                            <h2>QS. Ar-Rum Ayat 21</h2>
+                            <p>Da diantara tana-tanda (kebesarannya)-Nya ialah Dia menciptakan pasangan-pasangan untumu
+                                dari jenismu sendiri,
+                                agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+                                kasih dan sayang.
+                                Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi
+                                kaum yang berpikir.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+        <div>
+            <img src="img/Flower2.png" class="flowertwo">
+        </div>
+    </section>
+    <div id="audio-container">
+        <audio id="audio" autoplay loop="loop">
+            <source src="song.mp3" type="audio/mp3">
+        </audio>
+        <button id="playPauseBTN" class="btn btn-audio" onclick="playPause()">
+            <label for="click" class="label-box"></label>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-disc"
+                viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                <path
+                    d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0M8 4a4 4 0 0 0-4 4 .5.5 0 0 1-1 0 5 5 0 0 1 5-5 .5.5 0 0 1 0 1m4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5" />
+            </svg>
+            </label>
+        </button>
+    </div>
+    </div>
+
+    <script>
+        var audio = document.getElementById('audio');
+        var playPauseBTN = document.getElementById('playPauseBTN');
+        var count = 0;
+
+        function playPause() {
+            if (count == 0) {
+                count = 1;
+                audio.pause();
+                // Change the SVG to pause icon
+                playPauseBTN.innerHTML = `
+                    <label for="click" class="label-box"></label>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0z"/>
+                    </svg>`;
+            } else {
+                count = 0;
+                audio.play();
+                // Change the SVG to play icon
+                playPauseBTN.innerHTML = `
+                    <label for="click" class="label-box"></label>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-disc" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0M8 4a4 4 0 0 0-4 4 .5.5 0 0 1-1 0 5 5 0 0 1 5-5 .5.5 0 0 1 0 1m4.5 3.5a.5.5 0 0 1 .5.5 5 5 0 0 1-5 5 .5.5 0 0 1 0-1 4 4 0 0 0 4-4 .5.5 0 0 1 .5-.5"/>
+                    </svg>`;
+            }
+        }
+
+        function stop() {
+            playPause();
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
